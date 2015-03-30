@@ -6,9 +6,9 @@ fn main() {
         Option::Some(p) => {
             match i64::from_str(&p) {
                 Result::Ok(n) => println!("{}", factorial::factorial(n)),
-                Result::Err(e) => panic!("The parameter is invalid! {:?}", e),
+                Result::Err(e) => println!("Invalid parameter! {:?}", e),
             }
         }
-        Option::None => panic!("None parameter provided"),
+        Option::None => println!("Missing parameter!"),
     }
 }
