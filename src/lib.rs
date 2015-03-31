@@ -1,7 +1,9 @@
 pub fn factorial(val:i64)->i64{
     let mut result = 1;
-    for i in 1..val+1 {
-        result *= i;
+    if val > 0 {
+        for i in 1..val+1 {
+            result *= i;
+        }
     }
     result
 }
